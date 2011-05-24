@@ -1,5 +1,5 @@
 package com.grapefrukt.games.cards.events {
-	import com.grapefrukt.games.cards.cards.Card;
+	import com.grapefrukt.games.cards.models.Card;
 	import flash.events.Event;
 
 	/**

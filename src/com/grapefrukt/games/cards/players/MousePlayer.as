@@ -1,10 +1,9 @@
 package com.grapefrukt.games.cards.players {
-	import flash.events.MouseEvent;
 	import com.grapefrukt.games.cards.Settings;
+	import com.grapefrukt.games.cards.models.Card;
+	import com.grapefrukt.games.cards.models.Playfield;
 	import flash.display.InteractiveObject;
-	import com.grapefrukt.games.cards.players.IPlayer;
-	import com.grapefrukt.games.cards.cards.Playfield;
-	import com.grapefrukt.games.cards.cards.Card;
+	import flash.events.MouseEvent;
 
 	/**
 	 * @author grapefrukt
@@ -29,14 +28,11 @@ package com.grapefrukt.games.cards.players {
 
 		private function handleMouseMove(event : MouseEvent) : void { 
 			setCardPosition();
-			_playfield.position(_card);
-			_card.x += _playfield.x;
-			_card.y += _playfield.y;
 		}
 
 		private function setCardPosition() : void {
-			_card.playfieldX = Math.round(_mouseTarget.mouseX / (Settings.CARD_W + Settings.CARD_SPACING_X) - .5);
-			_card.playfieldY = Math.round(_mouseTarget.mouseY / (Settings.CARD_H + Settings.CARD_SPACING_Y) - .5);
+			_card.x = Math.round(_mouseTarget.mouseX / (Settings.CARD_W + Settings.CARD_SPACING_X) - .5);
+			_card.y = Math.round(_mouseTarget.mouseY / (Settings.CARD_H + Settings.CARD_SPACING_Y) - .5);
 		}
 
 		public function handlePlace(e : MouseEvent) : void {

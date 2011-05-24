@@ -1,7 +1,7 @@
 package com.grapefrukt.games.cards.players {
+	import com.grapefrukt.games.cards.models.Card;
+	import com.grapefrukt.games.cards.models.Playfield;
 	import flash.events.IEventDispatcher;
-	import com.grapefrukt.games.cards.cards.Card;
-	import com.grapefrukt.games.cards.cards.Playfield;
 
 	/**
 	 * @author grapefrukt
