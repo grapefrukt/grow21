@@ -14,7 +14,7 @@ package com.grapefrukt.games.cards.views {
 		public function BaseView(collection : CardCollection) {
 			addEventListener(Event.ENTER_FRAME, handleEnterFrame);
 			if (collection) collection.addEventListener(CardCollectionEvent.ADDED, handleCardAdded);
-			if (collection) collection.addEventListener(CardCollectionEvent.ADDED, handleCardRemoved);
+			if (collection) collection.addEventListener(CardCollectionEvent.REMOVED, handleCardRemoved);
 		}
 
 		public function invalidate() : void {
